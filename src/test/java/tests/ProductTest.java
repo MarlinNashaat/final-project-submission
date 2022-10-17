@@ -14,12 +14,13 @@ public class ProductTest extends BaseTest{
         Assert.assertEquals(productPage.getSearchProductMsg(),"SEARCHED PRODUCTS");
 
     }
+
     @Test(priority = 1)
     public void testSearchProductUsingEnterKey()
     {
         ProductPage productPage=new ProductPage(driver);
         Assert.assertEquals(productPage.getAllProductMsg(),"ALL PRODUCTS");
-        productPage.clickEnterToSearch("Blue");
+        productPage.pressEnterToSearchProduct("Blue");
         Assert.assertEquals(productPage.getSearchProductMsg(),"SEARCHED PRODUCTS");
     }
 }

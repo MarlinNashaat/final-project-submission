@@ -12,14 +12,14 @@ public class ProductPage extends  BasePage{
     //Locators
 
     //Get product page Message
-    private By allProductMsg=By.cssSelector(".title.text-center");
+    private By allProductMsg=By.cssSelector(".title");
 
     //search about product
     private By searchField =By.id("search_product");
-    private By searchBtn=By.cssSelector(".btn.btn-default.btn-lg");
+    private By searchBtn=By.cssSelector(".btn-lg");
 
     //Get search product message
-    private By searchProductMsg=By.cssSelector(".title.text-center");
+    private By searchProductMsg=By.cssSelector(".title");
 
 
     //Operation
@@ -32,7 +32,7 @@ public class ProductPage extends  BasePage{
         typeOnInputField(searchField,searchProduct);
         clickElement(searchBtn);
     }
-    public void clickEnterToSearch(String searchProduct)
+    public void pressEnterToSearchProduct(String searchProduct)
     {
         typeOnInputField(searchField,searchProduct);
         clickElementUsingEnterKey(searchField);
